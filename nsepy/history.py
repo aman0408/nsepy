@@ -252,8 +252,7 @@ def validate_params(symbol, start, end, index=False, futures=False, option_type=
             params['symbol'] = symbol
             params['series'] = series
             params['symbolCount'] = get_symbol_count(symbol)
-            params['fromDate'] = start.strftime('%d-%m-%Y')
-            params['toDate'] = end.strftime('%d-%m-%Y')
+            params['dateRange'] = "day"
             url = equity_history_url
             schema = EQUITY_SCHEMA
             headers = EQUITY_HEADERS
